@@ -1,0 +1,6 @@
+.profile__info {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 24px;
+}

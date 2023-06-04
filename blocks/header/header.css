@@ -1,0 +1,7 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    max-width: 880px;
+    max-height: 320px;
+}
