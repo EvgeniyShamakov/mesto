@@ -1,14 +1,16 @@
 .profile__title{
     font-style: normal;
-font-weight: 500;
-font-size: 42px;
-line-height: 48px;
-color: #FFFFFF;
-margin: 0;
-padding: 0;
-white-space: nowrap;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    max-width: 294px;
+    max-height: 39px;
+    letter-spacing: 1px;
 }
-
 @media screen and (max-width: 650px) {
     .profile__title {
         font-style: normal;
@@ -17,4 +19,4 @@ white-space: nowrap;
         line-height: 33px;
         text-align: center;
    }
-  }
+}

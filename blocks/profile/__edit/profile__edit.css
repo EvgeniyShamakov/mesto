@@ -7,13 +7,16 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    align-self: flex-end;
     padding: 0;
-    margin: 15px 2px 12px 18px;
+    align-self: flex-end;
 }
-
+.profile__edit:hover {
+    opacity: 0.6;
+}
 @media screen and (max-width: 320px) {
     .profile__edit {
-    margin-top: 7px;
+        width: 18px;
+        height: 18px;
+        align-self: center;
    }
-  }
+}

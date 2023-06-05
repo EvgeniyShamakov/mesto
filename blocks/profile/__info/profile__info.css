@@ -1,6 +1,19 @@
 .profile__info {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    padding-left: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    row-gap: 16px;
+}
+@media screen and (max-width: 1000px) {
+    .profile__info {
+        grid-template-columns: 1fr 24px;
+        justify-items: center;
+   }
+}
+@media screen and (max-width: 320px) {
+    .profile__info {
+        grid-template-columns: 1fr 18px;
+        column-gap: 10px;
+        row-gap: 14px;
+   }
 }

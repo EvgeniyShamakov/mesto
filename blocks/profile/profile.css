@@ -1,14 +1,15 @@
 .profile {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    padding-top: 40px;
-    max-width: 880px;
-    margin: 0 auto;
-  }
-
-  @media screen and (max-width: 1000px) {
-    .profile {
-       flex-direction: column;
-   }
-  }
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-top: 40px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .profile {
+      flex-direction: column;
+      gap: 22.25px;
+      padding-top: 42px;
+ }
+}

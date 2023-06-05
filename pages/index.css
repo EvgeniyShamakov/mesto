@@ -15,10 +15,10 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__close/__close-icon/popup__close-icon.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__input/__input-form/popup__input-form.css);
 @import url(../blocks/popup/__container/popup__container.css);
-@import url(../blocks/popup/__description/popup__description.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/element/element.css);

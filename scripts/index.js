@@ -18,7 +18,6 @@ function closePopup () {
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
 
-
 function submitForm (evt) {
     evt.preventDefault(); 
 

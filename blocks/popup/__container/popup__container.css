@@ -10,3 +10,12 @@
     align-items: center;
     position: relative;
 }
+@media screen and (max-width: 400px) {
+    .popup__container {
+        min-width: 282px;
+        min-height: 322px;
+        padding: 25px 22px;
+        margin-left: 19px;
+        margin-right: 19px;
+   }
+}

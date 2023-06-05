@@ -2,10 +2,10 @@
     max-width: 142px;
     max-height: 33px;
 }
-
 @media screen and (max-width: 320px) {
     .header__logo {
-       width: 103.74px;
-       height: 24.4px;
+        max-width: 103.74px;
+        max-height: 24.4px;
+        padding-left: 8px;
    }
-  }
+}
