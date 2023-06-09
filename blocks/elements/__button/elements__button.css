@@ -1,5 +1,5 @@
 .elements__button{
-    background: url('../../../../images/element-like.svg');
+    background: url('../../../../../images/element-like.svg');
     background-size: 100%;
     min-width: 22px;
     min-height: 19px;
@@ -14,5 +14,5 @@
 }
 .elements__button:active {
     opacity: 1;
-    background: url('../../../../images/dark-like.svg');
+    background: url('../../../../../images/dark-like.svg');
 }
