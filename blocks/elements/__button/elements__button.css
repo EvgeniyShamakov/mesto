@@ -14,5 +14,5 @@
 }
 .elements__button:active {
     opacity: 1;
-    background: url(../../../images/dark-like.svg');
+    background: url('../../../images/dark-like.svg');
 }
