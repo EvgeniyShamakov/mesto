@@ -10,7 +10,6 @@
       <div class="page">
          <header class="header">
             <img class="header__logo" src="./images/header-logo.svg" alt="Логотип Mesto">
-            <div class="header__line"></div>
          </header>
          <main>
             <section class="profile">
@@ -23,59 +22,47 @@
                <button  type="button" class="profile__button"></button>
             </section>
             <section class="elements">
-               <div class="element">
-                  <div class="element__rectangle">
-                     <img class="element__image" src="./images/element-karachaevsk.jpg" alt="Фото Карачаевска">
-                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
-                        <button type="button" class="element__button"></button>
+               <div class="elements__element">
+                     <img class="elements__image" src="./images/element-karachaevsk.jpg" alt="Фото Карачаевска">
+                     <div class="elements__description">
+                        <h2 class="elements__title">Карачаевск</h2>
+                        <button type="button" class="elements__button"></button>
                      </div>
-                  </div>
                </div>
-               <div class="element">
-                  <div class="element__rectangle">
-                     <img class="element__image" src="./images/element-elbrus.jpg" alt="Фото Горы Эльбрус">
-                     <div class="element__description">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button type="button" class="element__button"></button>
+               <div class="elements__element">
+                     <img class="elements__image" src="./images/element-elbrus.jpg" alt="Фото Горы Эльбрус">
+                     <div class="elements__description">
+                        <h2 class="elements__title">Гора Эльбрус</h2>
+                        <button type="button" class="elements__button"></button>
                      </div>
-                  </div>
                </div>
-               <div class="element">
-                  <div class="element__rectangle">
-                     <img class="element__image" src="./images/element-dombai.jpg" alt="Фото Домбая">
-                     <div class="element__description">
-                        <h2 class="element__title">Домбай</h2>
-                        <button type="button" class="element__button"></button>
+               <div class="elements__element">
+                     <img class="elements__image" src="./images/element-dombai.jpg" alt="Фото Домбая">
+                     <div class="elements__description">
+                        <h2 class="elements__title">Домбай</h2>
+                        <button type="button" class="elements__button"></button>
                      </div>
-                  </div>
                </div>
-               <div class="element">
-                  <div class="element__rectangle">
-                     <img class="element__image" src="./images/element-elbrus.jpg" alt="Фото Горы Эльбрус">
-                     <div class="element__description">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button type="button" class="element__button"></button>
+               <div class="elements__element">
+                     <img class="elements__image" src="./images/element-elbrus.jpg" alt="Фото Горы Эльбрус">
+                     <div class="elements__description">
+                        <h2 class="elements__title">Гора Эльбрус</h2>
+                        <button type="button" class="elements__button"></button>
                      </div>
-                  </div>
                </div>
-               <div class="element">
-                  <div class="element__rectangle">
-                     <img class="element__image" src="./images/element-dombai.jpg" alt="Фото Домбая">
-                     <div class="element__description">
-                        <h2 class="element__title">Домбай</h2>
-                        <button type="button" class="element__button"></button>
+               <div class="elements__element">
+                     <img class="elements__image" src="./images/element-dombai.jpg" alt="Фото Домбая">
+                     <div class="elements__description">
+                        <h2 class="elements__title">Домбай</h2>
+                        <button type="button" class="elements__button"></button>
                      </div>
-                  </div>
                </div>
-               <div class="element">
-                  <div class="element__rectangle">
-                     <img class="element__image" src="./images/element-karachaevsk.jpg" alt="Фото Карачаевска">
-                     <div class="element__description">
-                        <h2 class="element__title">Карачаево-Черкессия</h2>
-                        <button type="button" class="element__button"></button>
+               <div class="elements__element">
+                     <img class="elements__image" src="./images/element-karachaevsk.jpg" alt="Фото Карачаевска">
+                     <div class="elements__description">
+                        <h2 class="elements__title">Карачаево-Черкессия</h2>
+                        <button type="button" class="elements__button"></button>
                      </div>
-                  </div>
                </div>
             </section>
          </main>
@@ -85,17 +72,17 @@
       </div>
       <div class="popup">
          <div class="popup__container">
-            <form class="popup__form">
-               <button class="popup__close" type="button">
-               <img class="popup__close-icon"  src="images/close-icon.svg">
-               </button>
+            <form class="popup__form" name="profile-form">
                <h2 class="popup__title">Редактировать профиль</h2>
-               <fieldset class="popup__input-form">
-                  <input type="text" class="popup__input popup__input_name" value ="Жак-Ив Кусто"  name="name">
-                  <input type="text" class="popup__input popup__input_job" value ="Исследователь океана" name="job">
+               <fieldset class="popup__input">
+                  <input type="text" class="popup__input_value popup__input_value_name" value ="Жак-Ив Кусто"  name="name">
+                  <input type="text" class="popup__input_value popup__input_value_job" value ="Исследователь океана" name="job">
                </fieldset>
                <button class="popup__button" type="submit">Сохранить</button>
             </form>
+            <button class="popup__close-button" type="button">
+               <img class="popup__close"  src="images/close-icon.svg" alt="Иконка закрытия окна">
+            </button>
          </div>
       </div>
    </body>

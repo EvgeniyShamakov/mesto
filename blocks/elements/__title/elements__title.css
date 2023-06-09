@@ -1,5 +1,7 @@
-.element__title {
-    font-family: 'Inter';
+.elements__title {
+    margin-top: 25px;
+    margin-bottom: 31px;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;

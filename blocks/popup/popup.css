@@ -11,6 +11,3 @@
     font-family: 'Inter', 'Arial', sans-serif;
     display: none;
 }
-.popup__opened {
-    display: flex;
-}

@@ -9,14 +9,17 @@
     cursor: pointer;
     padding: 0;
     align-self: flex-end;
+    margin-bottom: 7px;
 }
 .profile__edit:hover {
     opacity: 0.6;
 }
 @media screen and (max-width: 320px) {
     .profile__edit {
+        background-size: 7.5px;
         width: 18px;
         height: 18px;
-        align-self: center;
+        padding: 5.25px;
+        margin-bottom: 7px;
    }
 }

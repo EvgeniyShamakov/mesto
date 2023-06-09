@@ -8,13 +8,10 @@
     padding: 0;
     white-space: nowrap;
     max-width: 294px;
-    max-height: 39px;
-    letter-spacing: 1px;
+    padding-top: 8px;
 }
 @media screen and (max-width: 650px) {
     .profile__title {
-        font-style: normal;
-        font-weight: 500;
         font-size: 27px;
         line-height: 33px;
         text-align: center;
