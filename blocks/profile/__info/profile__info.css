@@ -1,8 +1,11 @@
 .profile__info {
     display: grid;
-    grid-template-columns: 294px 24px;
+    grid-template-columns: fit-content(294px) 24px;
     column-gap: 18px;
     row-gap: 16px;
+}
+.profile__info > .profile__description {
+        grid-column: span 2;
 }
 @media screen and (max-width: 1070px) {
     .profile__info {
@@ -11,7 +14,7 @@
 }
 @media screen and (max-width: 370px) {
     .profile__info {
-        grid-template-columns: 189px 18px;
+        grid-template-columns: fit-content(282px) 18px;
         column-gap: 10px;
         row-gap: 14px;
    }
