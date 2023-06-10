@@ -4,7 +4,7 @@
     column-gap: 18px;
     row-gap: 16px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1070px) {
     .profile__info {
         text-align: center;
    }
