@@ -9,7 +9,7 @@
     padding: 0;
     color: #000000;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 560px) {
     .popup__input {
         margin-top: 75px;
    }
