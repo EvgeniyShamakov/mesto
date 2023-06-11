@@ -12,3 +12,8 @@
         line-height: 17px;
    }
 }
+@media screen and (max-width: 320px) {
+    .footer__copyright {
+        padding-left: 19px;
+   }
+}

@@ -6,14 +6,16 @@
     color: #FFFFFF;
     margin: 0;
     padding: 0;
-    padding-bottom: 8px;
+    padding-bottom: 15px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: 336px;
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 430px) {
     .profile__description {
         font-size: 14px;
         line-height: 17px;
+        padding-bottom: 0px;
    }
 }

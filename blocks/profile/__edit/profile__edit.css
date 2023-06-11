@@ -8,17 +8,18 @@
     background-position: center;
     cursor: pointer;
     padding: 0;
-    align-self: flex-end;
-    margin-bottom: 7px;
+    margin-bottom: 24px;
+    margin-left: 18px;
 }
 .profile__edit:hover {
     opacity: 0.6;
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 430px) {
     .profile__edit {
         background-size: 7.5px;
         width: 18px;
         height: 18px;
         padding: 5.25px;
+        margin-left: 0;
    }
 }
