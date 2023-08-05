@@ -3,8 +3,8 @@ const elementPopup = document.querySelector('.popup_element');
 const picturePopup = document.querySelector('.popup_picture');
 const profileButton = document.querySelector('.profile__edit');
 const elementButton = document.querySelector('.profile__button');
-const popupImage = document.querySelector('.popup__picture_image');
-const popupImageTitle = document.querySelector('.popup__picture_title');
+const popupImage = document.querySelector('.popup__picture-image');
+const popupImageTitle = document.querySelector('.popup__picture-title');
 const popupProfileButton = document.querySelector('.popup__close_profile');
 const popupElementButton = document.querySelector('.popup__close_element');
 const popupPictureButton = document.querySelector('.popup__close_picture');
@@ -24,7 +24,6 @@ function openPopup() {
     popupInputName.value = profileName.textContent;
     popupInputJob.value = jobName.textContent;
     profilePopupForm.onsubmit = submitForm;
-    document.addEventListener("keydown", this.handleEscape);
 };
 
 function closePopup() {
@@ -54,7 +53,6 @@ function closePicturePopup() {
 };
 
 profileButton.addEventListener('click', openPopup);
-
 popupProfileButton.addEventListener('click', closePopup);
 
 elementButton.addEventListener('click', openElementPopup);
@@ -137,10 +135,4 @@ function setLike(element) {
 
 function deleteCardElement(element) {
     element.remove();
-}
-
-function handleEscape(evt) {
-    if (evt.key === "Escape") {
-        this.close();
-    }
 }
