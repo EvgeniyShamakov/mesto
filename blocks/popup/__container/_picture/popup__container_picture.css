@@ -1,0 +1,12 @@
+.popup__container_picture {
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 560px) {
+    .popup__container_picture {
+        min-width: 240px;
+        margin-left: 40px;
+        margin-right: 40px;
+   }
+}
