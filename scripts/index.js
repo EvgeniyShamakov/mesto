@@ -53,7 +53,6 @@ popupProfileButton.addEventListener('click', () => {closePopup(profilePopup)});
 popupElementButton.addEventListener('click', () => {closePopup(elementPopup)});
 popupPictureButton.addEventListener('click', () => {closePopup(picturePopup)});
 
-
 function submitForm(evt) {
     evt.preventDefault();
     profileName.textContent = popupInputName.value;
