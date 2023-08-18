@@ -17,6 +17,7 @@ const popupInputName = document.querySelector('.popup__field_value_name');
 const popupInputJob = document.querySelector('.popup__field_value_job');
 const popupInputElementName = document.querySelector('.popup__field_element_name');
 const popupInputElementLink = document.querySelector('.popup__field_element_link');
+const popups = document.querySelectorAll('.popup');
 
 function editProfile() {
     openPopup(profilePopup);
@@ -40,18 +41,37 @@ function showPicture(name, link) {
 
 function openPopup(popupType) {
     popupType.classList.add('popup_opened');
+    document.addEventListener('keydown', closeOnEscape)
 };
 
 function closePopup(popupType) {
     popupType.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closeOnEscape)
 };
 
 profileButton.addEventListener('click', editProfile);
 elementButton.addEventListener('click', editElement);
 
+popups.forEach((popup) =>
+{
+    popup.addEventListener('mousedown', (evt) =>
+    {
+      if (evt.target.classList.contains('popup_opened'))
+        closePopup(popup);
+    })
+});
+
 popupProfileButton.addEventListener('click', () => {closePopup(profilePopup)});
 popupElementButton.addEventListener('click', () => {closePopup(elementPopup)});
 popupPictureButton.addEventListener('click', () => {closePopup(picturePopup)});
+
+function closeOnEscape (event) {
+    const key = event.key;
+    if (key === "Escape") {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup);
+    }
+};
 
 function submitForm(evt) {
     evt.preventDefault();

@@ -45,10 +45,12 @@
             <form class="popup__form" name="profile-form">
                <h2 class="popup__title">Редактировать профиль</h2>
                <fieldset class="popup__input">
-                  <input type="text" class="popup__field popup__field_value_name" value ="Жак-Ив Кусто"  name="name">
-                  <input type="text" class="popup__field popup__field_value_job" value ="Исследователь океана" name="job">
+                  <input type="text" class="popup__field popup__field_value_name" value ="Жак-Ив Кусто"  name="profile-name" minlength="2" maxlength="40" required>
+                  <span class="popup__input-error profile-name-error"></span>
+                  <input type="text" class="popup__field popup__field_value_job" value ="Исследователь океана" name="profile-job" minlength="2" maxlength="200" required>
+                  <span class="popup__input-error profile-job-error"></span>
                </fieldset>
-               <button class="popup__button" type="submit">Сохранить</button>
+               <button class="popup__button popup__button_disabled" type="submit">Сохранить</button>
             </form>
             <button class="popup__close popup__close_type_profile-close" type="button">
             <img class="popup__close-image"  src="images/close-icon.svg" alt="Иконка закрытия окна">
@@ -60,10 +62,12 @@
             <form class="popup__form" name="element-form">
                <h2 class="popup__title">Новое место</h2>
                <fieldset class="popup__input">
-                  <input type="text" class="popup__field popup__field_element_name" placeholder ="Название"  name="name">
-                  <input type="text" class="popup__field popup__field_element_link" placeholder ="Ссылка на картинку" name="link">
+                  <input type="text" class="popup__field popup__field_element_name" placeholder ="Название"  name="element-name" minlength="2" maxlength="30" required>
+                  <span class="popup__input-error element-name-error"></span>
+                  <input type="url"  class="popup__field popup__field_element_link" placeholder ="Ссылка на картинку" name="element-link" required>
+                  <span class="popup__input-error element-link-error"></span>
                </fieldset>
-               <button class="popup__button" type="submit">Сохранить</button>
+               <button class="popup__button popup__button_disabled" type="submit">Сохранить</button>
             </form>
             <button class="popup__close popup__close_type_element-close" type="button">
             <img class="popup__close-image"  src="images/close-icon.svg" alt="Иконка закрытия окна">
@@ -83,5 +87,6 @@
       </div>
       <script src="./scripts/cards.js"></script>
       <script src="./scripts/index.js"></script>
+      <script src="./scripts/validate.js"></script>
    </body>
 </html>
