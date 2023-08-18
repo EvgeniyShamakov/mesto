@@ -3,11 +3,12 @@ const selectors = {
   inputSelector: '.popup__field',
   submitButtonSelector: '.popup__button',
   inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'popup__field_type_error'
 };
 
-function showInputError(formElement, inputElement) {
+function showInputError(formElement, inputElement, selectors) {
   const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
-  inputElement.style.borderBottom = "1px solid red";
+  inputElement.classList.add(selectors.inputErrorClass);
   errorElement.textContent = inputElement.validationMessage;
 };
 
@@ -27,17 +28,17 @@ function toggleButtonState(inputList, buttonElement, selectors) {
   }
 }
 
-function hideInputError(formElement, inputElement) {
+function hideInputError(formElement, inputElement, selectors) {
   const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
-  inputElement.style.borderBottom = "1px solid rgba(0, 0, 0, 0.2)";
+  inputElement.classList.remove(selectors.inputErrorClass);
   errorElement.textContent = '';
 };
 
 function checkInputValidity(formElement, inputElement) {
   if (!inputElement.validity.valid) {
-      showInputError(formElement, inputElement);
+      showInputError(formElement, inputElement, selectors);
   } else {
-      hideInputError(formElement, inputElement);
+      hideInputError(formElement, inputElement, selectors);
   }
 };
 
