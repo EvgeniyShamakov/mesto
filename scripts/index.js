@@ -22,15 +22,16 @@ function editProfile() {
     openPopup(profilePopup);
     popupInputName.value = profileName.textContent;
     popupInputJob.value = jobName.textContent;
-    profilePopupForm.addEventListener('submit', submitForm);
 };
 
 function editElement() {
     openPopup(elementPopup);
     disableButton(popupButton, selectors);
     elementPopupForm.reset();
-    elementPopupForm.addEventListener('submit', submitElementForm);
 };
+
+profilePopupForm.addEventListener('submit', submitForm);
+elementPopupForm.addEventListener('submit', submitElementForm);
 
 function showPicture(name, link) {
     openPopup(picturePopup);
