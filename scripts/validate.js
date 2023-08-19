@@ -14,17 +14,25 @@ function showInputError(formElement, inputElement, selectors) {
 
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {
-      return !inputElement.validity.valid;
+  return !inputElement.validity.valid;
   });
 };
 
+function disableButton(buttonElement, selectors) {
+  buttonElement.classList.add(selectors.inactiveButtonClass);
+  buttonElement.setAttribute('disabled', true);
+}
+
+function enableButton(buttonElement, selectors) {
+  buttonElement.classList.remove(selectors.inactiveButtonClass);
+  buttonElement.removeAttribute('disabled');
+}
+
 function toggleButtonState(inputList, buttonElement, selectors) {
   if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(selectors.inactiveButtonClass);
-      buttonElement.setAttribute('disabled', true);
+      disableButton(buttonElement, selectors);
   } else {
-      buttonElement.classList.remove(selectors.inactiveButtonClass);
-      buttonElement.removeAttribute('disabled');
+      enableButton(buttonElement, selectors);
   }
 }
 

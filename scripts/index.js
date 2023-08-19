@@ -5,9 +5,7 @@ const profileButton = document.querySelector('.profile__edit');
 const elementButton = document.querySelector('.profile__button');
 const popupImage = document.querySelector('.popup__picture-image');
 const popupImageTitle = document.querySelector('.popup__picture-title');
-const popupProfileButton = document.querySelector('.popup__close_type_profile-close');
-const popupElementButton = document.querySelector('.popup__close_type_element-close');
-const popupPictureButton = document.querySelector('.popup__close_type_picture-close');
+const closeButtons = document.querySelectorAll('.popup__close');
 const profilePopupForm = document.querySelector('.popup__form[name="profile-form"]');
 const elementPopupForm = document.querySelector('.popup__form[name="element-form"]');
 const elements = document.querySelector('.elements');
@@ -18,18 +16,20 @@ const popupInputJob = document.querySelector('.popup__field_value_job');
 const popupInputElementName = document.querySelector('.popup__field_element_name');
 const popupInputElementLink = document.querySelector('.popup__field_element_link');
 const popups = document.querySelectorAll('.popup');
+const popupButton = elementPopup.querySelector('.popup__button');
 
 function editProfile() {
     openPopup(profilePopup);
     popupInputName.value = profileName.textContent;
     popupInputJob.value = jobName.textContent;
-    profilePopupForm.onsubmit = submitForm;
+    profilePopupForm.addEventListener('submit', submitForm);
 };
 
 function editElement() {
     openPopup(elementPopup);
+    disableButton(popupButton, selectors);
     elementPopupForm.reset();
-    elementPopupForm.onsubmit = submitElementForm;
+    elementPopupForm.addEventListener('submit', submitElementForm);
 };
 
 function showPicture(name, link) {
@@ -52,8 +52,7 @@ function closePopup(popupType) {
 profileButton.addEventListener('click', editProfile);
 elementButton.addEventListener('click', editElement);
 
-popups.forEach((popup) =>
-{
+popups.forEach((popup) => {
     popup.addEventListener('mousedown', (evt) =>
     {
       if (evt.target.classList.contains('popup_opened'))
@@ -61,9 +60,10 @@ popups.forEach((popup) =>
     })
 });
 
-popupProfileButton.addEventListener('click', () => {closePopup(profilePopup)});
-popupElementButton.addEventListener('click', () => {closePopup(elementPopup)});
-popupPictureButton.addEventListener('click', () => {closePopup(picturePopup)});
+closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
+});
 
 function closeOnEscape (event) {
     const key = event.key;
